@@ -18,4 +18,10 @@ public interface CarService {
     void updateById(Car car);
 
     void insertCar(Car car);
+
+    //根据车名、车系查询库存信息
+    Car findByCarNameAndCarSeries(String carName, String carSeries);
+
+    //显示的页数 page，每页的条目数size
+    List<Car> findCarInfoByWhere(String carName, Integer page, Integer size);
 }
